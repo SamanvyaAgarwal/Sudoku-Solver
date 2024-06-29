@@ -2,27 +2,11 @@ import java.util.Scanner;
 
 public class Sudoku {
     public static void main(String[] args) {
-        // int [][] su = {
-        //                 {5, 3, 0, 0, 7, 0, 0, 0, 0},
-        //                 {6, 0, 0, 1, 9, 5, 0, 0, 0},
-        //                 {0, 9, 8, 0, 0, 0, 0, 6, 0},
-        //                 {8, 0, 0, 0, 6, 0, 0, 0, 3},
-        //                 {4, 0, 0, 8, 0, 3, 0, 0, 1},
-        //                 {7, 0, 0, 0, 2, 0, 0, 0, 6},
-        //                 {0, 6, 0, 0, 0, 0, 2, 8, 0},
-        //                 {0, 0, 0, 4, 1, 9, 0, 0, 5},
-        //                 {0, 0, 0, 0, 8, 0, 0, 7, 9}
-        // };
-        // if (solveSudoku(su)) {
-        //     printSudoku(su);
-        // } else {
-        //     System.out.println("No solution exists");
-        // }
-
         int[][] su = new int[9][9];
         Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("Enter the Sudoku puzzle (9 rows, each row with 9 numbers separated by spaces, use 0 for empty cells):");
+
+        System.out.println(
+                "Enter the Sudoku puzzle (9 rows, each row with 9 numbers separated by spaces, use 0 for empty cells):");
         for (int i = 0; i < 9; i++) {
             System.out.print("Enter row " + (i + 1) + ": ");
             for (int j = 0; j < 9; j++) {
@@ -39,8 +23,8 @@ public class Sudoku {
 
         scanner.close();
     }
-    
-    static boolean isSafe(int[][] su, int row, int col, int num){
+
+    static boolean isSafe(int[][] su, int row, int col, int num) {
         for (int i = 0; i < su.length; i++) {
             if (su[i][col] == num) {
                 return false;
@@ -62,7 +46,8 @@ public class Sudoku {
         }
         return true;
     }
-    static boolean helper(int[][] su, int row, int col){
+
+    static boolean helper(int[][] su, int row, int col) {
         if (row == su.length) {
             return true;
         }
@@ -73,28 +58,29 @@ public class Sudoku {
             nrow = row + 1;
             ncol = 0;
         }
-        
+
         if (su[row][col] != 0) {
             return helper(su, nrow, ncol);
-            }
-            
-                for (int i = 1; i <= 9; i++) {
-                    if (isSafe(su, row, col, i)) {
-                        su[row][col] = i;
-                        if (helper(su, nrow, ncol)) {
-                            return true;
-                        } else{
-                            su[row][col] = 0;
-                        }
-                    }
+        }
+
+        for (int i = 1; i <= 9; i++) {
+            if (isSafe(su, row, col, i)) {
+                su[row][col] = i;
+                if (helper(su, nrow, ncol)) {
+                    return true;
+                } else {
+                    su[row][col] = 0;
                 }
-            
-        
+            }
+        }
+
         return false;
     }
-    static boolean solveSudoku(int[][] su){
+
+    static boolean solveSudoku(int[][] su) {
         return helper(su, 0, 0);
     }
+
     static void printSudoku(int[][] su) {
         for (int i = 0; i < su.length; i++) {
             for (int j = 0; j < su[i].length; j++) {
