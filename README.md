@@ -3,12 +3,12 @@
 ## helper Method
 *The **'helper'** method is a recursive function that attempts to solve the Sudoku puzzle by filling in the empty cells.*
 ### Parameters
-![Screenshot 2024-06-29 140000](https://github.com/SamanvyaAgarwal/Sudoku-Solver/assets/149570345/31b77796-8b04-40e6-866c-195753e471b9)
 * **'int[][] su'**: *The Sudoku grid represented as a 2D array.* 
 * **'int row'**: *The current row index.*
 *  **'int col'**: *The current column index.*
 ### Logic
 1. **Base case:**
+   ![Screenshot 2024-06-29 140000](https://github.com/SamanvyaAgarwal/Sudoku-Solver/assets/149570345/31b77796-8b04-40e6-866c-195753e471b9)
 * *If the **'row'** index reaches the length of the Sudoku grid, it means we have processed all rows and the puzzle is solved, so the method returns **'true'**.*
 2. **Determine Next Cell:**
 * *The next cell to process is typically the next column in the same row (**'col + 1'**).*
