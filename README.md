@@ -12,6 +12,9 @@
     ![Screenshot 2024-06-29 140000](https://github.com/SamanvyaAgarwal/Sudoku-Solver/assets/149570345/31b77796-8b04-40e6-866c-195753e471b9)
 * *If the **'row'** index reaches the length of the Sudoku grid, it means we have processed all rows and the puzzle is solved, so the method returns **'true'**.*
 2. **Determine Next Cell:**
+
+    ![Screenshot 2024-06-29 140441](https://github.com/SamanvyaAgarwal/Sudoku-Solver/assets/149570345/9221db7a-44bb-43f5-9649-852067bd97e4)
+
 * *The next cell to process is typically the next column in the same row (**'col + 1'**).*
 * *If the current column is the last column in the row (**'col == su.length - 1'**), the next cell is the first column of the next row (**'nrow = row + 1, ncol = 0'**).*
 3. **Skip Filled Cells:**
