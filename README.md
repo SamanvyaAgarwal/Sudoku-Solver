@@ -3,7 +3,8 @@
 ## helper Method
 *The **'helper'** method is a recursive function that attempts to solve the Sudoku puzzle by filling in the empty cells.*
 ### Parameters
-![This is an alt text.](/![image](https://github.com/SamanvyaAgarwal/Sudoku-Solver/assets/149570345/ffbe93ed-f674-45ec-a658-c8c28b28ea29)
+![This is an alt text.](/![Screenshot 2024-06-29 140000](https://github.com/SamanvyaAgarwal/Sudoku-Solver/assets/149570345/31b77796-8b04-40e6-866c-195753e471b9)
+)
  "This is a sample image.")
 * **'int[][] su'**: *The Sudoku grid represented as a 2D array.* 
 * **'int row'**: *The current row index.*
