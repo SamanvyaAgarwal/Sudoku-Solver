@@ -18,6 +18,9 @@
 * *The next cell to process is typically the next column in the same row (**'col + 1'**).*
 * *If the current column is the last column in the row (**'col == su.length - 1'**), the next cell is the first column of the next row (**'nrow = row + 1, ncol = 0'**).*
 3. **Skip Filled Cells:**
+
+    ![Screenshot 2024-06-29 140618](https://github.com/SamanvyaAgarwal/Sudoku-Solver/assets/149570345/a5fca0d5-6fe6-4f8a-96da-148bb7ba5fd5)
+
 * *If the current cell is already filled (i.e., not **'0'**), the method recursively calls itself with the next cell (**'nrow, ncol'**).*
 4. **Try Possible Numbers:**
 * *The method tries all possible numbers (**'1'** to **'9'**) for the current cell.*
