@@ -23,10 +23,16 @@
 
 * *If the current cell is already filled (i.e., not **'0'**), the method recursively calls itself with the next cell (**'nrow, ncol'**).*
 4. **Try Possible Numbers:**
+
+    ![Screenshot 2024-06-29 140730](https://github.com/SamanvyaAgarwal/Sudoku-Solver/assets/149570345/bbb55ce8-0678-40aa-81bf-3e167491d702)
+
 * *The method tries all possible numbers (**'1'** to **'9'**) for the current cell.*
 * *It checks if placing the number **'i'** in the current cell is safe using the **'isSafe'** method.*
 * *If placing the number **'i'** is safe, it assigns the number to the cell and recursively calls the **'helper'** method with the next cell (**'nrow, ncol'**).*
 * *If the recursive call returns **'true'**, it means the puzzle is solved, and the method returns **'true'**.*
 * *If the recursive call returns **'false'**, it resets the cell to **'0'** (backtracks) and tries the next number.*
 5. **Backtracking:**
+
+    ![Screenshot 2024-06-29 140808](https://github.com/SamanvyaAgarwal/Sudoku-Solver/assets/149570345/b04156b8-932d-4ee5-987f-88dedcdc305b)
+
 * *If no number from **'1'** to **'9'** can be placed in the current cell, the method returns **'false'**, indicating that the current path does not lead to a solution.*
